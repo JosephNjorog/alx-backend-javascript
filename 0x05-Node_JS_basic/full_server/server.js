@@ -1,11 +1,11 @@
+import router from './routes/index';
+
 const express = require('express');
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello Holberton School!');
-});
-
+app.use('/', router);
 app.listen(1245);
 
 module.exports = app;
+export default app;
